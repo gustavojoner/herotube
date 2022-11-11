@@ -54,6 +54,7 @@ const StyledHeader = styled.div`
         width: 80px;
         height: 80px;
         border-radius: 50%;
+        object-fit: cover;
     }
     .user-info {
         display: flex;
@@ -66,15 +67,16 @@ const StyledHeader = styled.div`
 const StyledBanner = styled.div`
     background-color: blue;
     background-image: url(${({ bg }) => bg});
-    /* background-image: url(${config.bg}); */
     height: 230px;
+    background-position: center;
+    background-size: cover;
 `;
 function Header() {
     return (
         <StyledHeader>
             <StyledBanner bg={config.bg} />
             <section className="user-info">
-                <img src={`https://github.com/${config.github}.png`} />
+                <img src={config.image} />
                 <div>
                     <h2>
                         {config.name}

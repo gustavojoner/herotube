@@ -22,13 +22,14 @@ const StyledSwitch = styled.div`
     content: "";
     background-color: #fafafa;
     border: 1px solid #333333;
-    width: 24px;
-    height: 24px;
+    width: 19px;
+    height: 19px;
     border-radius: 100%;
+    margin: auto;
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 0.1;
     transition: .3s;
     cursor: pointer;
   }

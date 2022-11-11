@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components"
+import { FaSearch } from 'react-icons/fa';
 
 const StyledSearch = styled.div`
   display: flex;
@@ -16,17 +17,18 @@ const StyledSearch = styled.div`
     border: none;
     outline: none;
     color: ${({ theme }) => theme.textColorBase};
-    background-color: ${({ theme }) => theme.backgroundBase};
+    background-color: ${({ theme }) => theme.backgroundBase2};
   }
   button {
     flex: 1;
     cursor: pointer;
     border: none;
-    background-color: ${({ theme }) => theme.backgroundLevel2};
+    background-color: ${({ theme }) => theme.backgroundLevel3};
     box-shadow: 0 1px 0 rgb(0 0 0 / 10%);
     border-left: 1px solid ${({ theme }) => theme.borderBase};
     width: 40px;
     height: 40px;
+    color: ${({ theme }) => theme.textColorBase};
     @media (min-width: 600px) {
       width: 64px;
       height: 40px;
@@ -34,14 +36,7 @@ const StyledSearch = styled.div`
   }
 `;
 
-// Home 
-// Menu
-// Search
-// Informação sempre desce
-
 export default function Search({ valorDoFiltro, setValorDoFiltro }) {
-    // const [valorDaBusca, setValorDaBusca] = React.useState("Teste");
-    // console.log("Search", valorDaBusca)
     const valorDaBusca = valorDoFiltro;
     const setValorDaBusca = setValorDoFiltro;
 
@@ -49,7 +44,7 @@ export default function Search({ valorDoFiltro, setValorDoFiltro }) {
         <StyledSearch>
             <input type="text" onChange={(e) => setValorDaBusca(e.target.value)} value={valorDaBusca} />
             <button>
-                🔎
+              <FaSearch fontSize="1.3em"/>
             </button>
         </StyledSearch>
     )
