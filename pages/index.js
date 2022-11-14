@@ -3,6 +3,7 @@ import config from "../config.json";
 import styled from "styled-components";
 import Menu from "../src/components/Menu";
 import { StyledTimeline } from "../src/components/Timeline";
+import { Footer } from "../src/components/Footer";
 import { videoService } from "../src/services/videoService";
 
 function HomePage() {
@@ -40,6 +41,7 @@ function HomePage() {
                 <Timeline searchValue={valorDoFiltro} playlists={playlists}>
                     Conteúdo
                 </Timeline>
+                <Footer />
             </div>
         </>
     );
@@ -65,7 +67,7 @@ const StyledHeader = styled.div`
     }
 `;
 const StyledBanner = styled.div`
-    background-color: blue;
+    background-color: black;
     background-image: url(${({ bg }) => bg});
     height: 230px;
     background-position: center;
