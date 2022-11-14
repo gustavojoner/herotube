@@ -5,6 +5,7 @@ export const StyledTimeline = styled.div`
   width: 100%;
   padding: 16px;
   overflow: hidden;
+  margin-bottom: 10px;
   h2 {
     font-size: 16px;
     margin-bottom: 16px;
@@ -33,6 +34,27 @@ export const StyledTimeline = styled.div`
       grid-auto-columns: minmax(200px,1fr);
       overflow-x: scroll;
       scroll-snap-type: x mandatory;
+
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        display: contents;
+      }
+      ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: ${({ theme }) => theme.backgroundBase};
+      }
+      ::-webkit-scrollbar-thumb{
+        border-radius: 10px;
+        background: rgba(0,0,0,0.2);
+      }
+      ::-webkit-scrollbar-thumb:hover{
+        background: ${({ theme }) => theme.textColorBase};
+      }
+      ::-webkit-scrollbar-thumb:active{
+        background: rgba(0,0,0,.9);
+      }
+
       a {
         scroll-snap-align: start;
         span {

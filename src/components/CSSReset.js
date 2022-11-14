@@ -37,4 +37,8 @@ export const CSSReset = createGlobalStyle`
       opacity: .5;
     }
   }
+
+  ::-webkit-scrollbar {
+      display: none;
+    }
 `;
