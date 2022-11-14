@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import DarkModeSwitch from "./components/DarkModeSwitch";
 import Search from "./components/Search";
-import { BsYoutube } from 'react-icons/bs';
 import { GiBatMask } from 'react-icons/gi';
 
 const StyledMenu = styled.header`
@@ -22,8 +21,7 @@ export default function Menu({ valorDoFiltro, setValorDoFiltro }) {
   return (
     <StyledMenu>
       <div>
-        <BsYoutube color="red" fontSize="1.3em" />
-        <GiBatMask fontSize="1.6em" />
+        <GiBatMask fontSize="2em" />
       </div>
       <Search valorDoFiltro={valorDoFiltro} setValorDoFiltro={setValorDoFiltro} />
       <DarkModeSwitch />
